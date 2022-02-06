@@ -74,7 +74,4 @@ sudo pip3 install -r /home/ubuntu/HousePricePrediction/server/requirements.txt
 python3 /home/ubuntu/HousePricePrediction/client/server.py
 ```
 Running last command above will prompt that server is running on port 5000.
-8. Then, I just load my cloud url in browser ( http://ec2-54-84-32-87.compute-1.amazonaws.com/ ) and this is a fully functional website running in production cloud environment.
-
-
-
+8. Then, I just load my cloud url in browser and successfully run the fully functional Data Science website in the production cloud environment.
