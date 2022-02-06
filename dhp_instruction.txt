@@ -1,0 +1,32 @@
+							**Instruction**
+
+
+ssh -i "C:\Users\Md Mahadi Hasan Sany\.ssh\dhaka.pem" ubuntu@ec2-54-84-32-87.compute-1.amazonaws.com
+
+etc/nginx/sites-available: sudo unlink/rm dhp.conf
+
+etc/nginx/sites-available: sudo vim dhp.conf
+
+
+then :-
+
+server {
+    listen 80;
+        server_name bhp;
+        root /home/ubuntu/HousePricePrediction/client;
+        index app.html;
+        location /api/ {
+             rewrite ^/api(.*) $1 break;
+             proxy_pass http://127.0.0.1:5000;
+        }
+}
+
+
+cd ../sites-enabled/
+
+etc/nginx/sites-enabled: sudo ln -v -s /etc/nginx/sites-available/dhp.conf  inside /etc/nginx/sites-enabled
+
+
+etc/nginx/sites-enabled: sudo service nginx status
+etc/nginx/sites-enabled: sudo service nginx restart
+etc/nginx/sites-enabled: sudo service nginx status
